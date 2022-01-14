@@ -23,7 +23,7 @@ class NewsListAdapter( private val listener: NewsItemClicked): RecyclerView.Adap
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         val currentItem = items[position]
-        holder.titleView.text = currentItem.title
+        holder.titleView.text = currentItem.title //this line is creating error
     }
 
     override fun getItemCount(): Int {
