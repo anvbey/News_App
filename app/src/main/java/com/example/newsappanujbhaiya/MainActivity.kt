@@ -20,8 +20,9 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        fetchData()
         mAdapter = NewsListAdapter(this)
+        fetchData()
+//        mAdapter = NewsListAdapter(this)
         recyclerView.adapter = mAdapter
 
     }
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
                 mAdapter.updateNews(newsArray)
             },
             {
-
+                Toast.makeText(this, "Error Loading", Toast.LENGTH_LONG).show()
             }
         )
 
